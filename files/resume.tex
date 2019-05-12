@@ -1,0 +1,189 @@
+\documentclass[9pt]{article}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage[usenames]{color}
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.25in
+\textheight=9.25in
+\thispagestyle{empty}
+\pagestyle{empty}
+
+\raggedright
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\scshape{#1}\\
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\contact}[5]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\LARGE \scshape {#1}}\\ \medskip
+			{\large {#2}}\\ \smallskip 
+			{#3}\\ \smallskip
+			{#4}\\ \smallskip
+			{#5}
+		\end{center}
+	\end{changemargin}
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\ 
+	#4\\
+}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\contact{Erica Xu}{2B Computer Science}{\underline{\url{www.ericaxu.com}}}{erica.xu@uwaterloo.ca}{(226) 220-3323}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Summary of Qualifications
+\header{Summary of Qualifications}
+
+\begin{body}
+	\vspace{14pt}
+	\begin{itemize}
+		\item Created and maintained websites with PHP, HTML, CSS, and JavaScript with jQuery
+		\item Experienced with programming in C/C++, Scheme, bash, Java, and Python
+		\item Familiar with Photoshop and wireframing tools such as Balsamiq and Azure
+		\item Quick and enthusiastic learner, able to pick up new technologies in a short period of time
+	\end{itemize}
+  \medskip
+
+\end{body}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Work Experience
+\header{Work Experience}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Web Developer}, \emph{Dominion Bond Rating Service  (DBRS)} \hfill \emph{May - August 2012 }\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item Helped maintain and improve the corporate website \url{www.dbrs.com}
+		\item Picked up quite a few technologies in four months: PHP with Symfony, MVC architecture, PL/SQL, Selenium testing suite, NetBeans, MySQL, Batch, Balsamiq, C\#.NET
+		\item Made use of SVN and Agile/Scrum while working in a small team
+		\item Worked with databases of considerable size with both Oracle 11g and MySQL
+		\item Documented various processes for the team wiki and contributed to the company co-op program
+		
+	\end{itemize}
+
+	\textbf{Teaching Assistant}, \emph{AceBase Foreign Language Training Center} \hfill \emph{November 2010 - August 2011}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item Responsible for communicating with students and parents for feedbacks
+		\item Revamped the vocabulary testing procedures by randomizing tests
+	\end{itemize}
+
+	\textbf {Web Designer and Developer}, \emph{Sharpscope Precision Industrial Co., Ltd.} \hfill \emph{July 2009 - Jan 2010}
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item Designed, prototyped and developed the first version of the company website
+		\item Designed the brochure for a product with Photoshop, available at \url{www.ericaxu.com/files/brochure.pdf}
+	\end{itemize}
+\end{body}
+
+\smallskip
+
+% \newpage{} % uncomment this line if you want to force a new page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Skills
+\header{Skills}
+
+\begin{body}
+	\vspace{14pt}
+	\emph{\textbf{Programming:}}{} C++, Scheme, bash, C, Java, Python, \LaTeX\\
+	\medskip
+	\emph{\textbf{Web Development:}}{} HTML, CSS, JavaScript with jQuery, PHP with Symfony framework, Backbone.js\\
+	\medskip
+	\emph{\textbf{Design:}}{} Interface prototyping with Balsamiq and Azure, Photoshop\\
+	\medskip
+	\emph{\textbf{IDEs:}}{} NetBeans, Visual Studio, Coda, Eclipse, DrRacket\\
+\end{body}
+
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{Education}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Bachlor of Computer Science}{} \hfill \emph{September 2011 - Present}{} \\
+	\emph{University of Waterloo}, Waterloo, ON{} \\
+	\begin{itemize}
+		\item Awarded with University of Waterloo Merit Scholarship
+		\item Relevant courses\\
+		\begin{itemize}
+			\item \textbf{CS 246}: Object-Oriented Software Development
+				\begin{itemize}
+					\item Language used: C++
+					\item Topics: encapsulation, inheritance, polymorphism, and various design patterns
+					\item Final project: command line version of the Hearts game with the option to play with smart, random, or human players
+				\end{itemize} \smallskip
+			\item \textbf{CS 136}: Elementary Algorithm Design and Data Abstraction
+				\begin{itemize}
+					\item Language used: Scheme and C
+					\item Topics: memory management, efficiency analysis, search techniques, abstract data types
+				\end{itemize} \smallskip
+			\item \textbf{CS 135}: Designing Functional Programs
+				\begin{itemize}
+					\item Language used: Scheme
+					\item Topics: resursion, dictionaries, binary search tree, anonymous function, backtracking
+					\item Final project: computer puzzle player
+				\end{itemize}
+		\end{itemize}
+	\end{itemize}
+  \medskip
+
+\end{body}
+
+\smallskip
+
+
+\end{document}
